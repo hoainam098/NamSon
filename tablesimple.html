@@ -9,24 +9,24 @@
             border-collapse: collapse;
             width: 100%;
         }
-        td, th {
-            border: 1px solid #d2d3d5;
+        td,
+        th {
+            border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-        tr :nth-child(2n+1) {
-            background-color: #d2d3d5;
+        tr:nth-child(odd) {
+            background-color: #dddddd;
         }
-        tr :nth-child(2n) {
-            background-color: #be4e4e;
-        }
+        /*tr :nth-child(2n) {*/
+        /*    background-color: #ffffff;*/
+        /*}*/
 
     </style>
 </head>
 <body>
 <table>
-    <tbody>
-    <tr style="background-color: #d2d3d5">
+    <tr>
         <th>Company</th>
         <th>Contact</th>
         <th>Country</th>
@@ -61,8 +61,6 @@
         <td>Giovanni Rovelli</td>
         <td>Italy</td>
     </tr>
-    </tbody>
 </table>
-<hr>
 </body>
 </html>
