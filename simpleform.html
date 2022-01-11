@@ -7,16 +7,25 @@
         .wufoo {
             font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
         }
+        .out {
+            margin: auto;
+            border-style: outset;
+            border-color: antiquewhite;
+            width: fit-content;
+            text-align: center;
+            background-color: cadetblue;
+        }
+
     </style>
 </head>
 <body>
-<body>
+<div class="out">
 <form method="get" action="simpleform.html">
 </form>
 <h2>Order Form</h2>
 <p>What would you like to buy?</p>
 <select>
-    <option value = "  ">A</option>
+    <option>A</option>
     <option>B (+  0.5$)</option>
     <option>C (+  0.5$)</option>
 </select>
@@ -34,7 +43,7 @@
 <input type = "text" name="phone2" size="5"/> -
 <input type = "text" name="phone3" size="5"/>
 <p><input type = "button" name="btSubmit" value="Submit"/></p>
-
 <form method="get" action="simpleform.html" class = "wufoo">
+</div>
 </body>
 </html>
