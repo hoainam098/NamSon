@@ -20,8 +20,9 @@
             document.getElementById('ms02').innerHTML='xin chao!';
             // bai tap 03
             // document.write('19 Phu Tho xin chao!')
-            const p1=document.createElement('h1');
             // console.log('xin chao!');
+
+            const p1=document.createElement('h1');
             p1.innerHTML='Hello!';
             const div=document.getElementById('ms02');
             div.appendChild(p1);
@@ -37,6 +38,24 @@
         ms02.remove()
     }
 </script>
+<hr>
+<h1 id="mn">mina-san konichiwa</h1>
+<script>
+    var mouse = document.getElementById('mn');
+    mouse.addEventListener('mouseover',chuotvao);
+    mouse.addEventListener("mouseout", chuotra);
+    function chuotvao() {
+        document.getElementById('mn').innerHTML='not here';
+        document.getElementById('mn').style.color='red';
 
+    }
+    function chuotra() {
+        document.getElementById('mn').style.color='green';
+        document.getElementById('mn').innerHTML='Xin chao moi nguoi';
+        document.getElementById('mn').style.textAlign='center';
+
+    }
+
+</script>
 </body>
 </html>
