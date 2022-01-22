@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T-90 tank</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        div{
+            height: 500px;
+            width: 500px;
+            border-style: solid;
+            border-color: red;
+        }
+        #tank{
+            position: relative;
+        }
+        table{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body onload="key_move()">
+<div class="d1">
+    <img id="tank" class="takin" src="tank.png" height="35" width="35"/></div>
+<script>
+    let tank=document.getElementById('tank')
+    let rtn= 90;
+
+    document.getElementById("tank").style["top"] = 240 + "px"
+    document.getElementById("tank").style["left"] = 240 + "px"
+    document.getElementById('tank').style.rotate = 0 + "deg"
+
+    function up() {
+        tank.style.top = parseInt(tank.style.top) - 10 + 'px' ;
+        tank.style.rotate = 0+'deg'
+    }
+    function down() {
+        tank.style.top = parseInt(tank.style.top) + 10 + 'px' ;
+        tank.style.rotate = 180+'deg'
+    }
+    function left() {
+        tank.style.left = parseInt(tank.style.left) - 10 + 'px' ;
+        tank.style.rotate = 270+'deg'
+    }
+    function right() {
+        tank.style.left = parseInt(tank.style.left) + 10 + 'px' ;
+        tank.style.rotate = 90+'deg'
+    }
+    function key_move() {
+        window.addEventListener('keydown',tank_move)
+    }
+
+    function tank_move(evt){
+        switch (evt.keyCode) {
+            case 38:
+                up()
+                break
+            case 40:
+                down()
+                break
+            case 37:
+                left()
+                break
+            case 39:
+                right()
+                break
+
+        }
+
+    }
+
+</script>
+<table border="1" >
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" onclick="up()">Up</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="left()">Left</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="right()">Right</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" onclick="down()">Down</button>
+        </td>
+        <td></td>
+
+
+        <!--    <button type="button" onclick="document.getElementById('tank').style.left=parseInt(document.getElementById('tank').style.left)+10+'px' ">left</button>-->
+</table>
+</body>
+</html>
