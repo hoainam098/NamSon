@@ -21,7 +21,7 @@
 
 <form action="">
     <h1>Tính điểm ĐH khối </h1>
-    Môn Toán:  <input id="toan" type="number"> <br>
+    Môn Toán:  <input id="toan" value="2" type="number"> <br>
     Môn Văn:  <input id="van" type="number"> <br>
     Môn Anh:  <input id="anh" type="number"> <br>
 
@@ -41,9 +41,9 @@
     let toan = document.getElementById('toan').value
     let van = document.getElementById('van').value
     let anh = document.getElementById('anh').value
-        // console.log('toan',anh)
+        console.log('toan',toan)
     let tong = (toan*1+van*1+anh*1)
-// console.log('tong',tong)
+console.log('tong',tong)
     let kv = document.getElementById('kv')
 console.log('diem kv',kv.value)
     let noti = document.getElementById('noti')
@@ -62,11 +62,7 @@ console.log('diem kv',kv.value)
             case "kv3":
                 noti.innerText= "*" + (tong)
                 break
-
-
-
         }
-
     }
 </script>
 </body>
