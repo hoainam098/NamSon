@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            text-align: center;
+            padding: 30px;
+            border-style: none;
+            background-color: #33ccff;
+            color: #ffffff;
+            border-radius: 5%;
+            width: 200px;
+            font-size: 30px;
+        }button:hover{
+            color: #ff4456;
+            background-color: #b15fe9;
+
+                 }
 
     </style>
 </head>
 <body>
-<button id="guess"> Play </button>
+<button id="guess" > Play </button>
 <script>
     document.getElementById('guess').addEventListener('click',function play() {
         let input = Number( prompt('Bạn muốn chơi đoán số từ 0 đến  '))
