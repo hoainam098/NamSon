@@ -3,8 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Tu dien</title>
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: antiquewhite;
+
+        }
+        button{
+            margin-top: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+<h1>Dictionary</h1>
+<input id="input" type="text" size="50">
+<br> <button id="search" onclick="search()">Search</button>
+<br><p id="result"></p>
 
+<script>
+let dicmodel = [
+    {
+        word: "eat",
+        mean: "ăn"
+    },
+    {
+       word: "drink",
+       mean: "uống"
+    },
+    {
+        word: "run",
+        mean: "chạy"
+    }]
+let input = document.getElementById('input')
+    console.log(dicmodel[1])
+
+    function search() {
+        for (let i = 0;i < dicmodel.length;i++) {
+            if (dicmodel[i].word != input.value) {
+                document.getElementById('result').innerText = 'Từ khoá: ' + input.value + " không tìm thấy."
+            }
+            }
+        for (let i = 0;i < dicmodel.length;i++) {
+            if (dicmodel[i].word == input.value ) {
+                document.getElementById('result').innerText='Ý nghĩa là: '+dicmodel[i].mean
+            }
+            // document.getElementById('result').innerText = 'Từ khoá: ' + input.value + " không tìm thấy."
+
+        }
+    }
+</script>
 </body>
 </html>
